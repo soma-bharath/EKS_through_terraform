@@ -5,7 +5,7 @@ resource "aws_eks_node_group" "testeksclusternode" {
   cluster_name           = aws_eks_cluster.testekscluster.name
   disk_size              = 20
   force_update_version   = null
-  instance_types         = ["t3.medium"]
+  instance_types         = ["t2.micro"]
   labels                 = {}
   node_group_name        = "test-eks-nodegroup-1"
   node_group_name_prefix = null
