@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "testekscluster" {
-  count                     = length(var.subnet)
+  #count                     = length(var.subnet)
   enabled_cluster_log_types = ["audit", "scheduler"]
   name                      = "test-eks-cluster"
   role_arn                  = aws_iam_role.Eks_Cluster_Role.arn #"arn:aws:iam::357028046444:role/AmazonEKSClusterPolicy"

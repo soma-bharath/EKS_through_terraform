@@ -1,8 +1,8 @@
 resource "aws_eks_node_group" "testeksclusternode" {
-  count                  = length(var.subnet)
+  #count                  = length(var.subnet)
   ami_type               = "AL2_x86_64"
   capacity_type          = "ON_DEMAND"
-  cluster_name           = "test-eks-cluster"
+  cluster_name           = aws_eks_cluster.testekscluster.name
   disk_size              = 20
   force_update_version   = null
   instance_types         = ["t3.medium"]
