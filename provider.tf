@@ -16,7 +16,7 @@ resource "null_resource" "argo_install" {
   provisioner "local-exec" {
     command = <<EOT
       sudo chmod 777 mine.sh
-      sudo bash ${path.module}/EKS_through_terraform/mine.sh
+      sudo bash ${path.module}/mine.sh
     EOT
 
     #working_dir = "/tmp"  # You can change the working directory as needed
